@@ -1,13 +1,25 @@
 {
   "name": "jwt-debugger",
   "displayName": "JWT Debugger",
-  "description": "",
-  "version": "0.0.1",
+  "description": "JWT tokens decoder - VS Code version of jwt.io debugger",
+  "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "yokawasa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yokawasa/vscode-jwt-debugger.git"
+  },
+  "icon": "assets/icon.png",
   "engines": {
-    "vscode": "^1.37.0"
+    "vscode": "^1.36.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "jwt",
+    "token",
+    "decoder"
   ],
   "activationEvents": [
     "onCommand:extension.jwtdebugger.decode"
@@ -41,7 +53,7 @@
     "@types/jwt-decode": "^2.2.1",
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.21",
-    "@types/vscode": "^1.37.0",
+    "@types/vscode": "^1.36.0",
     "glob": "^7.1.4",
     "mocha": "^6.1.4",
     "tslint": "^5.12.1",
