@@ -2,7 +2,7 @@
   "name": "jwt-debugger",
   "displayName": "JWT Debugger",
   "description": "JWT tokens decoder - VS Code version of jwt.io debugger",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "publisher": "yokawasa",
   "repository": {
