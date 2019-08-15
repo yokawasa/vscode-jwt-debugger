@@ -32,6 +32,14 @@
         "title": "JWT Debugger Decocde"
       }
     ],
+    "keybindings": [
+      {
+        "command": "extension.jwtdebugger.decode",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d",
+        "when": "editorTextFocus"
+      }
+    ],
     "menus": {
       "commandPalette": [
         {
