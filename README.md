@@ -9,16 +9,19 @@ vscode-jwt-debugger allows you to decode JWT. You simply needt to select JWT enc
 
 ![](assets/vscode-jwt-debugger.gif)
 
+
 ## Installation
 - Open the `Command Palette` of VS Code with `Ctrl + P` or `Cmd + P`(MacOS)
 - And type: `ext install yokawasa.jwt-debugger`
 
 or find at [Marketplace](https://marketplace.visualstudio.com/)
 
-## Commands
-- `JWT Debugger Decocde`
+## Command & Shortcut
+| Command | Shortcut | Description |
+| --- | --- | --- |
+| `JWT Debugger Decocde` | `Ctrl+Shift+d` <br> (Mac: `Cmd+Shift+d`) | Decode selected JWT Token text |
 
-> [NOTE] You can execute the command above either in `Command Palette` or with keybind `Ctrl+Shift+d` (Mac: `Cmd+Shift+d`)
+> NOTE:  The command `JWT Debugger Decocde` and its shortcut key are NOT available when there is no selected text. 
 
 ## Change Log
 See [Change Log](CHANGELOG.md)
