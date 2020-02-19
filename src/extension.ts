@@ -60,6 +60,7 @@ function getWebviewContent(token: string, header: any, payload: any) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src http://localhost:* http://127.0.0.1:*; script-src 'unsafe-inline'; style-src 'unsafe-inline';"></head>
   <title>JWT Debugger - Decoded</title>
 </head>
 <body>
