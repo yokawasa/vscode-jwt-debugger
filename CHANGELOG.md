@@ -2,6 +2,9 @@
 
 All notable changes to the "jwt-debugger" extension will be documented in this file.
 
+## 0.4.0
+- Add [Content-Security-Policy](https://code.visualstudio.com/api/extension-guides/webview#content-security-policy)
+
 ## 0.3.0
 - Disable a command shortcut key (`Ctrl+shift+d` or `Cmd+shift+d` for Mac) when editor has no text selection
 
