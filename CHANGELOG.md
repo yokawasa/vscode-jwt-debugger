@@ -2,6 +2,11 @@
 
 All notable changes to the "jwt-debugger" extension will be documented in this file.
 
+## 0.4.2
+- Fix security vulnerability: upgrade jargs-parser to 13.1.2
+- Fix security vulnerability: upgrade minimist to 1.2.5
+
+
 ## 0.4.1
 - Fix CSP: only allow the minimal amount of content that our extension needs to function
 
