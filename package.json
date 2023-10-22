@@ -43,8 +43,7 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "extension.jwtdebugger.decode",
-          "when": "editorHasSelection"
+          "command": "extension.jwtdebugger.decode"
         }
       ]
     }

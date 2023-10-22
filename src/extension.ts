@@ -2,8 +2,8 @@ import * as vscode from 'vscode';
 import * as jwtDecode from "jwt-decode";
 
 export function activate(context: vscode.ExtensionContext) {
-
-  let disposable = vscode.commands.registerCommand('extension.jwtdebugger.decode', () => {
+  console.log(context)
+  let disposable = vscode.commands.registerCommand('extension.jwtdebugger.decode', async () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       let selections: vscode.Selection[] = editor.selections;
@@ -12,9 +12,17 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
       let selection: vscode.Selection = selections[0];
-      let encoded_text:string = editor.document.getText(
+
+      let encoded_text:any = '';
+
+      if(!selection.isEmpty) {
+        encoded_text = editor.document.getText(
           new vscode.Range(selection.start, selection.end
         ));
+      }else{
+        encoded_text = await vscode.window.showInputBox({ placeHolder: 'Paste your base64 encoded JWT here' })
+      }
+
       if (encoded_text.length < 1) {
         vscode.window.showErrorMessage('Please select text!');
         return;
@@ -31,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
               {}
             );
         panel.webview.html = getWebviewContent(encoded_text, decodedHeader, decodedPayload);
-      } catch (e){
+      } catch (e: any){
         if (e.name === 'InvalidTokenError') {
           vscode.window.showErrorMessage('Invalid Token Error!');
         }
