@@ -5,6 +5,7 @@ All notable changes to the "jwt-debugger" extension will be documented in this f
 ## 0.5.0
 
 - New feature: Input terminal for decode JWT that allow users insert their token into input terminal, and decode by @seon22break in [#9](https://github.com/yokawasa/vscode-jwt-debugger/pull/9)
+- Fix TS1196: Catch clause variable cannot have a type annotation by @yokawasa in [#14](https://github.com/yokawasa/vscode-jwt-debugger/pull/14)
 
 ## 0.4.2
 
