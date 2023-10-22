@@ -39,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
               {}
             );
         panel.webview.html = getWebviewContent(encoded_text, decodedHeader, decodedPayload);
-      } catch (e: any){
+      } catch (e){
         if (e.name === 'InvalidTokenError') {
           vscode.window.showErrorMessage('Invalid Token Error!');
         }
