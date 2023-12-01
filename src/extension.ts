@@ -30,8 +30,20 @@ export function activate(context: vscode.ExtensionContext) {
 
       try {
         // jwtDocode return the result of JSON.parse() ( JSON.parse() return any )
-        const decodedHeader = jwtDecode(encoded_text, { header: true });
-        const decodedPayload = jwtDecode(encoded_text);
+        const decodedHeader: any = jwtDecode(encoded_text, { header: true });
+        const decodedPayload: any = objectMap(
+          (jwtDecode(encoded_text) as any),
+          (value: any, key) => {
+          switch (key) {
+            case 'nbf':
+            case 'exp':
+            case 'iat':
+              return `${value} (${new Date(value * 1000).toString()})`;
+              break;
+          }
+          return value
+        });
+
         const panel = vscode.window.createWebviewPanel(
               'previewJWTDecoded',
               'Preview JWT Decoded Result',
@@ -48,6 +60,20 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   context.subscriptions.push(disposable);
+}
+
+/**
+ * Applies a function to every element of an object, and returns the object
+ * @param obj Object to iterate on properties
+ * @param fn Function to apply on each property
+ * @returns A typed object
+ */
+export function objectMap<V, R>(obj: { [key: string]: V }, fn: (value: V, key: string, index: number) => R) {
+  return Object.fromEntries(
+    Object.entries(obj).map(
+      ([k, v], i) => [k, fn(v, k, i)]
+    )
+  );
 }
 
 export function deactivate() {}

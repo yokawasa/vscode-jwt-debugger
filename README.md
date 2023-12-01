@@ -23,9 +23,9 @@ or find at [Marketplace](https://marketplace.visualstudio.com/)
 ## Command & Shortcut
 | Command | Shortcut | Description |
 | --- | --- | --- |
-| `JWT Debugger Decocde` | `Ctrl+Shift+d` <br> (Mac: `Cmd+Shift+d`) | Decode selected JWT Token text |
+| `JWT Debugger Decode` | `Ctrl+Shift+d` <br> (Mac: `Cmd+Shift+d`) | Decode selected JWT Token text |
 
-> NOTE:  The command `JWT Debugger Decocde` and its shortcut key are NOT available when there is no selected text. 
+> NOTE:  The command `JWT Debugger Decode` and its shortcut key are NOT available when there is no selected text. 
 
 ## Change Log
 See [Change Log](CHANGELOG.md)

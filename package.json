@@ -29,7 +29,7 @@
     "commands": [
       {
         "command": "extension.jwtdebugger.decode",
-        "title": "JWT Debugger Decocde"
+        "title": "JWT Debugger Decode"
       }
     ],
     "keybindings": [
