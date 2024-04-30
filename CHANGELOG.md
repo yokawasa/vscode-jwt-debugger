@@ -2,6 +2,12 @@
 
 All notable changes to the "jwt-debugger" extension will be documented in this file.
 
+## 0.6.0
+
+- Human readable unix epoch in JWT decoded payload by @LouLeGrain in https://github.com/yokawasa/vscode-jwt-debugger/pull/15
+- Remove onCommand entries from  activationEvents in package.json by @yokawasa in https://github.com/yokawasa/vscode-jwt-debugger/pull/16
+
+
 ## 0.5.0
 
 - New feature: Input terminal for decode JWT that allow users insert their token into input terminal, and decode by @seon22break in [#9](https://github.com/yokawasa/vscode-jwt-debugger/pull/9)
